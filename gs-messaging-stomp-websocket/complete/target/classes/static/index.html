@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello WebSocket</title>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+</head>
+<style>
+    label {
+        text-align: center;
+    }
+    #online-users-label{
+        font-size: 15px;
+    }
+    #users{
+        margin-top: 5px;
+        font-size: 15px;
+    }
+    #refresh-btn {
+        margin-top: 10px;
+    }
+    #messageLbl{
+        padding-top: 20px;
+    }
+</style>
+<body>
+
+<h1>Send a Message</h1>
+<label id="online-users-label" for="users">Online users</label>
+<button id="refresh-btn" type="button">Refresh</button>
+<select id="users">
+    <option>Public</option>
+</select>
+
+<label id="messageLbl" for="message">Message:</label>
+<textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+<button type="submit" id="send-message-btn">Send</button>
+<br>
+
+<ul id="message-list" style="list-style-type: none">
+</ul>
+<script src="/app2.js"></script>
+</body>
+</html>
